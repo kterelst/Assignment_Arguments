@@ -5,13 +5,15 @@ __human_name__ = 'arguments'
 # Add your code after this line
 
 
+# Tell me a name and how to greet you
 def greet(name, greeting=None):
     if greeting is None:
         return f'Hello, {name}!'
     else:
-        return greeting.replace('<name>', name)  # find had ook gekund
+        return greeting.replace('<name>', name)  # find is also possible
 
 
+# How much force is needed on a specific planet
 def force(mass: float, body='earth'):
     gravity = {
         'sun': 274,
@@ -28,6 +30,7 @@ def force(mass: float, body='earth'):
     return mass * gravity[body]
 
 
+# How much do two objects pull to each other
 def pull(m1: float, m2: float, d: float):
     G = 6.674 * 10 ** -11  # gravitational constante
     return G * ((m1 * m2) / d ** 2)
