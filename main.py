@@ -6,11 +6,8 @@ __human_name__ = 'arguments'
 
 
 # Tell me a name and how to greet you
-def greet(name, greeting=None):
-    if greeting is None:
-        return f'Hello, {name}!'
-    else:
-        return greeting.replace('<name>', name)  # find is also possible
+def greet(name, greeting='Hello, <name>!'):
+    return greeting.replace('<name>', name)  # find is also possible
 
 
 # How much force is needed on a specific planet
